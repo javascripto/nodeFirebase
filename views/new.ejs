@@ -1,5 +1,13 @@
 <%- include('./layout/head') %>
     <form action="/new" method="post">
+      <div class="input-field">
+        <input type="text" name="name" id="name">
+        <label for="name">Nome</label>
+      </div>
+      <div class="input-field">
+        <input type="email" name="email" id="email">
+        <label for="email">E-mail</label>
+      </div>
       <input type="submit" value="Salvar" class="btn red">
     </form>
     <p><a href="/" class="btn">Voltar</a></p>
