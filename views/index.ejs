@@ -2,16 +2,22 @@
     <h1>Listagem</h1>
     <table>
       <thead>
-        <td>Name</td>
-        <td>Email</td>
-        <td></td>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
       </thead>
       <tbody>
+      <% for (let k in contacts) { %>
         <tr>
-          <td>Yuri</td>
-          <td>yuri@mail.com</td>
-          <td><a href="#" class="btn">ver</a></td>
+          <td><%= contacts[k].name %></td>
+          <td><%= contacts[k].email %></td>
+          <td>
+            <a href="/view/<%= k %>" class="btn">ver</a>
+          </td>
         </tr>
+      <% }; %>
       </tbody>
     </table>
     <p><a href="/new" class="btn">Novo</a></p>
