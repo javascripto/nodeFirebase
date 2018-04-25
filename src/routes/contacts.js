@@ -5,4 +5,7 @@ module.exports = function(app) {
   app.get('/new', controller.new);
   app.post('/new', controller.newPost);
   app.get('/view/:id', controller.view);
+  app.get('/edit/:id', controller.edit);
+  app.post('/edit/:id', controller.editPost);
+  app.get('/remove/:id', controller.remove);
 }

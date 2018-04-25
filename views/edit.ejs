@@ -1,0 +1,14 @@
+<%- include('./layout/head') %>
+    <form action="/edit/<%= id %>" method="post">
+      <div class="input-field">
+        <input type="text" name="name" id="name" value="<%= contact.name %>">
+        <label for="name">Nome</label>
+      </div>
+      <div class="input-field">
+        <input type="email" name="email" id="email" value="<%= contact.email %>">
+        <label for="email">E-mail</label>
+      </div>
+      <input type="submit" value="Salvar" class="btn red">
+    </form>
+    <p><a href="/view/<%= id %>" class="btn">Voltar</a></p>
+<%- include('./layout/footer') %>
